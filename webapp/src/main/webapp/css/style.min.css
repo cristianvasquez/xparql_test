@@ -1,0 +1,412 @@
+@charset "utf-8"; 
+
+* {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	cursor: default
+}
+
+html {
+	background: #E9E9E0;
+	font-size: 90%
+}
+
+body {
+	font-family: 'DejaVu Sans', Arial, sans-serif;
+	font-size: 73%;
+	margin: 0 30px 10px
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: underline
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+textarea,input {
+	border: 0;
+	color: #555;
+	cursor: text;
+	outline: none
+}
+
+textarea:focus,input:focus {
+	color: #000
+}
+
+textarea:active,input:active {
+	color: #000
+}
+
+ul,ol {
+	list-style-type: none;
+	margin-left: 50px
+}
+
+h1 {
+	border-right: solid 1px #DDD;
+	float: left;
+	margin-right: .5em;
+	padding-right: .5em
+}
+
+section h1 {
+	margin-left: 3px
+}
+
+footer {
+	color: #555
+}
+
+p {
+	font-style: italic;
+	font-weight: 100
+}
+
+footer p {
+	margin: 1em 0
+}
+
+section {
+	border: none;
+	display: block;
+	margin-bottom0: 8px
+}
+
+small {
+	font-family: arial, sans-serif
+}
+
+#samples {
+	position: absolute;
+	right: 30px;
+	top: 5px
+}
+
+header {
+	display: block;
+	font-size: 133%;
+	margin: 10px 11px;
+	text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 3px #FFF
+}
+
+header h1,header p {
+	padding-top: .5em;
+	padding-bottom: .5em
+}
+
+.panel {
+	background: #F9F9F9;
+	border: solid 1px #999;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: 2px 2px 5px #999;
+	-moz-box-shadow: 2px 2px 5px #999;
+	-webkit-box-shadow: 2px 2px 5px #999;
+	margin-bottom: 12px;
+	overflow: hidden
+}
+
+.section-header {
+	border: solid 0 #FFF;
+	border-color: #FFF #000 #EEE #FFF;
+	border-radius: 2px 2px 0 0;
+	-moz-border-radius: 2px 2px 0 0;
+	border-width: 1px 0 0 1px;
+	padding: 7px 10px 5px;
+	text-shadow: 1px 1px #FFF
+}
+
+#result .section-header {
+	border-bottom-width: 1px
+}
+
+
+#editor {
+	background: #FFF;
+	border: solid 0 #DDD;
+	border-width: 1px 0;
+	cursor0: text;
+	margin-bottom: 7px;
+	padding: 10px
+}
+
+
+textarea,code {
+	font-family: 'DejaVu Sans Mono', monospace;
+	font-size: 139.5%;
+	font-size: 11px;
+	line-height: 15px
+}
+
+.panel0 {
+	color: #555;
+	margin: 24px 0 12px;
+	text-align: center
+}
+
+.panel00 {
+	display: inline-block;
+	margin0: 12px auto 24px;
+	text-align: left
+}
+
+.separ {
+	border-bottom: solid 1px #999;
+	border-top: solid 1px #FFF;
+	margin: 5px 5px 5px 18px
+}
+
+
+.actions span {
+	cursor: pointer
+}
+
+.right {
+	text-align: right
+}
+
+.left {
+	text-align: left
+}
+
+hr {
+	border: none;
+	clear: both;
+	height: 0px;
+	margin-top: -1px;
+	visibility: hidden
+}
+
+label {
+	display: inline-block;
+	padding: 5px;
+	width: 7em
+}
+
+#mel,#msg {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-top0: 5px;
+	padding: 3px;
+	vertical-align: top
+}
+
+
+.contact-error #mel.empty,.contact-error #msg.empty {
+	border-color: #F50;
+	color: #DDD
+}
+
+.sent .field {
+	border-color: #555;
+	color: #555
+}
+
+.sending .field {
+	background: #F9F9F9;
+	color: #888;
+	text-shadow: 1px 1px 0 #CCC
+}
+
+.error {
+	background: #FF0;
+	color: #F50;
+	padding: 0 2px
+}
+
+.inline-view code ol,.inline-view code ul,.inline-view code li {
+	display: inline;
+	margin: 0
+}
+
+.show-types .type {
+	display: inline
+}
+
+.clickable {
+	border-bottom0: solid 1px !important;
+	cursor: pointer;
+	text-decoration: none !important
+}
+
+.collapsed ul,.collapsed ol {
+	display: none !important
+}
+
+.collapsed .cardinality,.collapsed .etc {
+	display: inline
+}
+
+.type {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	color: #000;
+	color: rgba(255, 255, 255, 1);
+	color: #CCC;
+	display: none;
+	padding: 0 3px;
+	margin-right: .5em;
+	font-family: 'DejaVu Sans', Arial, sans-serif;
+	line-height: 12px;
+	font-size: 11px;
+	font-weight0: bold;
+	font-style: italic;
+	background0: #DDD
+}
+
+
+.etc {
+	display: none
+}
+
+.property {
+	border: solid 1px #CDE;
+	border-color: #1E90FF;
+	border-width: 0 0 0px 0;
+	white-space: pre
+}
+
+
+.cardinality {
+	display: none
+}
+
+.index {
+	border: solid 1px #EDC;
+	border-width: 0 0 1px;
+	color: #888;
+	display: none;
+	text-shadow0: 0 0 1px #000;
+	text-shadow0: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000
+}
+
+.show-indexes .index {
+	display: inline
+}
+
+
+.pretty-table
+{
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border: 1px solid #333;
+  font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  color: #000;
+}
+
+.pretty-table caption
+{
+  caption-side: bottom;
+  font-size: 0.9em;
+  font-style: italic;
+  text-align: right;
+  padding: 0.5em 0;
+}
+
+.pretty-table th, .pretty-table td
+{
+  border: 1px dotted #666;
+  padding: 0.5em;
+  text-align: left;
+  color: #632a39;
+}
+
+.pretty-table th[scope=col]
+{
+  color: #000;
+  background-color: #8fadcc;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border-bottom: 2px solid #333;
+  border-right: 2px solid #333;
+}
+
+.pretty-table th+th[scope=col]
+{
+  color: #fff;
+  background-color: #7d98b3;
+  border-right: 1px dotted #666;
+}
+
+.pretty-table th[scope=row]
+{
+  background-color: #b8cfe5;
+  border-right: 2px solid #333;
+}
+
+.pretty-table tr.alt th, .pretty-table tr.alt td
+{
+  color: #2a4763;
+}
+
+.pretty-table tr:hover th[scope=row], .pretty-table tr:hover td
+{
+  background-color: #632a2a;
+  color: #fff;
+}
+
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #e0e0e0;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1.2em;
+}

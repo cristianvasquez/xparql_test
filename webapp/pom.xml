@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.deri</groupId>
+    <artifactId>xsparql</artifactId>
+    <version>0.2</version>
+  </parent>
+
+  <artifactId>webapp</artifactId>
+  <name>XSPARQL test webapp</name>
+
+  <packaging>war</packaging>
+  <version>0.2</version>
+  <url>http://xsparql.deri.org/</url>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.deri</groupId>
+      <artifactId>lang</artifactId>
+      <version>0.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+        <artifactId>maven-jetty-plugin</artifactId>
+        <version>6.1.25</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>servlet-api</artifactId>
+					<groupId>org.mortbay.jetty</groupId>
+				</exclusion>
+			</exclusions>
+    </dependency>
+    
+    <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<type>jar</type>
+			<scope>provided</scope>
+	</dependency>
+
+  </dependencies>
+
+  <!-- Tomcat Deployment -->
+	<build>
+		<defaultGoal>package</defaultGoal>
+		<finalName>xml2rdf</finalName>
+		<plugins>
+		    <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-compiler-plugin</artifactId>
+		      <version>2.0.2</version>
+		      <configuration>
+		        <source>${java.source}</source>
+		        <target>${java.target}</target>
+		      </configuration>
+		    </plugin>	
+			<plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>tomcat-maven-plugin</artifactId>
+		        <configuration>
+		         		<path>${app.webcontext}</path>			        
+		                <url>${tomcat.url}</url>
+		                <port>${app.port}</port>
+		                <username>${tomcat.username}</username>
+	        			<password>${tomcat.password}</password>		                
+		        </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.19</version>
+				<configuration>
+					<scanIntervalSeconds>5</scanIntervalSeconds>
+				</configuration>
+			</plugin>		
+		</plugins>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
+	</build>
+	
+  	<properties>
+		<maven.version>2.0.6</maven.version>
+		<java.source>1.6</java.source>
+		<java.target>1.6</java.target>
+		<app.webcontext>/xml2rdf</app.webcontext>
+		<app.port>8080</app.port>
+	</properties>
+	
+</project>
